@@ -1,19 +1,9 @@
 import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
-const MyNavBar = (props) => {
+function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
-
   return (
     <div>
         <Navbar color="info" light expand="md">
@@ -34,4 +24,4 @@ const MyNavBar = (props) => {
   );
 }
 
-export default MyNavBar;
+export default NavBar;
