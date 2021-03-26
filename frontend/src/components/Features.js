@@ -6,6 +6,7 @@ const listStyle = {
     padding: "25px 50px 100px 100px",
     textAlign: "left",
     fontSize: "30px",
+
   };
 
 
@@ -18,6 +19,7 @@ const headerStyle = {
 const componentStyle = {
     backgroundColor: "#F4EAE6",
     fontFamily: "Verdana",
+    borderTop: "50px solid #4297A0"
 }
  
 function Features()
