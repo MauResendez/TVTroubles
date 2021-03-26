@@ -5,16 +5,19 @@ const listStyle = {
     color: 'black',
     padding: "25px 50px 100px 100px",
     textAlign: "left",
+    fontSize: "30px",
   };
 
 
 const headerStyle = {
     margin: "25px 25px",
     textAlign: "center",
+    fontSize: "45px",
 };
 
 const componentStyle = {
     backgroundColor: "#F4EAE6",
+    fontFamily: "Verdana",
 }
  
 function Features()
