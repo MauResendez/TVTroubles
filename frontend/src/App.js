@@ -1,8 +1,12 @@
 import './App.css';
-import LandingPage from './views/LandingPage'
-function App() {
+import LandingPage from './views/LandingPage';
+
+function App() 
+{
   return (
-    <LandingPage/>
+    <div>
+      <LandingPage/>
+    </div>
   );
 }
 
