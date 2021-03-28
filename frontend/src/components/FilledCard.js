@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardHeader, CardFooter, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Container } from 'reactstrap';
+import { Card, CardHeader, CardFooter, CardImg, Container } from 'reactstrap';
 
 function FilledCard(props) 
 {
@@ -8,7 +8,7 @@ function FilledCard(props)
         <Container> 
             <Card>
                 <CardHeader><strong>{props.name}</strong></CardHeader>
-                <CardImg src={props.photo} alt="School Image" className="p-3" style={{minHeight: '200px', minWidth: '200px'}}/>
+                <CardImg src={props.photo} alt="School Image" className="cardImg"/>
                 <CardFooter><h7>{props.intro}</h7></CardFooter>
             </Card>
         </Container>
