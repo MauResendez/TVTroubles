@@ -25,7 +25,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was created by [Jason](https://github.com/MauResendez), [Mauricio](https://github.com/kehngid), [Nam](https://github.com/nhn190000), [Nivetha](https://github.com/Nivetha1512), [Varsha](https://github.com/varshageorge20), during the Spring 2021 session of Codubee. We built this application as a solution to those who cannot figure out what to watch.
+This project was created by [Jason](https://github.com/kehngid), [Mauricio](https://github.com/MauResendez), [Nam](https://github.com/nhn190000), [Nivetha](https://github.com/Nivetha1512), [Varsha](https://github.com/varshageorge20), during the Spring 2021 session of Codubee. We built this application as a solution to those who cannot figure out what to watch.
 
 
 <!-- GETTING STARTED -->
