@@ -6,14 +6,15 @@ import '../styles/Features.css'
 function Features()
 {
     return ( 
-        <div> 
             <div className="container">
                 <div className="row"> 
+                {/* Displays title of component "Features" */}
                     <div className="col-3"></div>
-                    <h1 className="col-6">Features</h1>
+                    <h1 className="col-6">Features</h1> 
                     <div className="col-3"></div>
                 </div>
                 <div className="row">
+                    {/* Displays the list of features */}
                     <div className="col-md-1 col-lg-4"></div>
                     <List className="col-md-10 col-lg-6">
                         <li>Choosing yes or no on a TV show</li>
@@ -23,7 +24,6 @@ function Features()
                     <div className="col-md-1 col-lg-4"></div>
                 </div>
             </div>
-        </div>
     );
 }
 
