@@ -1,0 +1,17 @@
+body {
+    background-color: #F4EAE6;
+    font-family: Verdana;
+    border-top: 50px solid #4297A0;
+}
+
+h1 {
+    margin: 25px 25px;
+    text-align: center;
+    font-size: 50px;
+}
+
+li {
+    text-align: left;
+    font-size: 25px;
+
+}
