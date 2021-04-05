@@ -1,0 +1,16 @@
+.featuresBackground {
+    font-family: Verdana;
+    margin-bottom: 6em;
+}
+
+.featuresTitle {
+    margin: 25px 25px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.featuresListItems {
+    text-align: left;
+    font-size: 25px;
+
+}
