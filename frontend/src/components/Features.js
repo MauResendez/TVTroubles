@@ -2,12 +2,11 @@ import React from 'react'
 import { List } from 'reactstrap'
 import '../styles/Features.css'
 
-function Features()
-{
-    return ( 
-            <div className ="featuresBackground">
+function Features() {
+    return (
+        <div className="featuresBackground">
             <div className="container">
-                    <h1 className="featuresTitle">Features</h1> 
+                <h1 className="featuresTitle">Features</h1>
                 <div className="row">
                     <div className="col-md-1 col-lg-4"></div>
                     <List className="col-md-10 col-lg-6 featuresListItems">

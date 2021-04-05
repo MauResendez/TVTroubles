@@ -6,9 +6,10 @@ import Explanation from '../components/Explanation'
 function LandingPage(){
     return(
         <div>
-            <Team/>
+            
             <Explanation/>
             <Features/>
+            <Team/>
         </div>
     )
 }
