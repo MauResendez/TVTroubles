@@ -1,8 +1,11 @@
 import React from "react";
+import Description from '../components/Description';
 
 function Swipe() {
     return (
-        <h1>Swipe Page</h1>
+        <div>
+            <Description/>
+        </div>
     );
 }
 
