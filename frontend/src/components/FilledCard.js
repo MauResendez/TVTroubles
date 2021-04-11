@@ -11,7 +11,7 @@ function FilledCard(props)
             <Card>
                 <CardHeader><strong>{props.name}</strong></CardHeader>
                 <CardImg src={props.photo} alt="School Image" className="cardImg"/>
-                <CardFooter><h7>{props.intro}</h7></CardFooter>
+                <CardFooter>{props.intro}</CardFooter>
             </Card>
         </Container>
     )

@@ -1,8 +1,10 @@
 import React from "react";
+import MatchResults from "../components/MatchResults";
+import {matchesData} from '../data/matchesData'
 
 function Swipe() {
     return (
-        <h1>Swipe Page</h1>
+        <MatchResults data={matchesData}/>
     );
 }
 
