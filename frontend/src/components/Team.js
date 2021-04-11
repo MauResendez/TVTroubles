@@ -2,12 +2,14 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import FilledCard from './FilledCard';
 
+import '../styles/Team.css';
+
 function Team() 
 {
     return (
         <div>
-            <h1 className="text-center">Team</h1>
-            <Row>
+            <h1 className="teamTitle">Team</h1>
+            <Row className="team">
                 <Col><FilledCard name="Varsha George" photo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/ut-dallas-logo02.png" major="Computer Science" intro="I'm Varsha George. I'm currently in my Freshman year of my Computer Science degree at the University of Texas at Dallas"/></Col>
                 <Col><FilledCard name="Nam Nguyen" photo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/ut-dallas-logo02.png" major="Computer Science" intro="I'm Nam Nguyen. I'm currently in my Senior year of my Computer Science degree at the University of Texas at Dallas"/></Col>
                 <Col><FilledCard name="Jason Kluge" photo="https://cdn.freelogovectors.net/wp-content/uploads/2018/03/ut-dallas-logo02.png" major="Computer Science" intro="I'm Jason Kluge. I'm currently in my Sophmore year of my Computer Science degree at the University of Texas at Dallas"/></Col>
