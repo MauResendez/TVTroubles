@@ -1,8 +1,12 @@
 import React from "react";
+import Description from '../components/Description';
+import {Container } from 'reactstrap'
 
 function Swipe() {
     return (
-        <h1>Swipe Page</h1>
+        <Container>
+            <Description/>
+        </Container>
     );
 }
 
