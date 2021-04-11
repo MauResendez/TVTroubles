@@ -1,10 +1,15 @@
 import React from "react";
 import MatchResults from "../components/MatchResults";
 import {matchesData} from '../data/matchesData'
+import Description from '../components/Description';
+import {Container } from 'reactstrap'
 
 function Swipe() {
     return (
-        <MatchResults data={matchesData}/>
+        <Container>
+            <Description/>
+            <MatchResults data={matchesData}/>
+        </Container>
     );
 }
 
