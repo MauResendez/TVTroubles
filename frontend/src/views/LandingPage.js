@@ -1,4 +1,5 @@
 import React from 'react';
+import Tools from '../components/Tools';
 import Features from '../components/Features'
 import Team from '../components/Team';
 import Explanation from '../components/Explanation'
@@ -9,6 +10,7 @@ function LandingPage(){
             <Explanation/>
             <Features/>
             <Team/>
+            <Tools/>
         </div>
     )
 }
