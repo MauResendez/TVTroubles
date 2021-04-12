@@ -1,23 +1,23 @@
 import React from 'react';
 import {Container, Row, Col } from 'reactstrap';
 
-import rlogo from '../images/react-logo.png';
-import awslogo from '../images/aws-logo.png';
-import hlogo from '../images/heroku-logo.png';
-import jlogo from '../images/jira-logo.png'; 
-import nlogo from '../images/nodejs-logo.jpg';
-import plogo from '../images/postman-logo.png';
+import react from '../images/react-logo.png';
+import aws from '../images/aws-logo.jpeg';
+import heroku from '../images/heroku-logo.png';
+import jira from '../images/jira-logo.png'; 
+import nodejs from '../images/nodejs-logo.jpg';
+import postman from '../images/postman-logo.jpeg';
 
 function Tools() {
   return (
-      <Container fluid>
-        <Row noGutters>
-          <Col sm="12" md="4" ><img src={rlogo} roundedCircle fluid/> </Col>
-          <Col sm="12" md="4" ><img src={awslogo} roundedCircle fluid/></Col>
-          <Col sm="12" md="4" > <img src={hlogo} roundedCircle fluid/> </Col>
-          <Col sm="12" md="4" > <img src={jlogo} roundedCircle fluid/> </Col>
-          <Col sm="12" md="4" > <img src={nlogo} roundedCircle fluid/> </Col>
-          <Col sm="12" md="4" > <img src={plogo} roundedCircle fluid/></Col>
+      <Container >
+        <Row >
+          <Col sm="12" md="4" ><img src={react}   fluid alt=""/> </Col>
+          <Col sm="12" md="4" ><img src={aws}   fluid alt=""/></Col>
+          <Col sm="12" md="4" > <img src={heroku}   fluid alt=""/> </Col>
+          <Col sm="12" md="4" > <img src={jira}   fluid alt=""/> </Col>
+          <Col sm="12" md="4" > <img src={nodejs}   fluid alt=""/> </Col>
+          <Col sm="12" md="4" > <img src={postman}   fluid alt=""/></Col>
         </Row>
       </Container>
   );
