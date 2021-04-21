@@ -2,7 +2,7 @@ import React from 'react';
 import Features from '../components/Features'
 import Team from '../components/Team';
 import Explanation from '../components/Explanation'
-import ResponsivePlayer from '../components/video/ResponsivePlayer'
+import ResponsivePlayer from '../components/ResponsivePlayer'
 
 function LandingPage() {
     return (
