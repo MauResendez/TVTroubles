@@ -12,7 +12,6 @@ function LandingPage() {
             <Team/>
             {/* Insert your created components here */}
             <ResponsivePlayer/>
-            <Explanation />
             <h1>Landing Page Component</h1>
         </div>
     )
