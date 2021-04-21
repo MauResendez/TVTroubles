@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 
-const ResponsivePlayer = () => {
+function ResponsivePlayer () {
     return (
         <div className = "player-wrapper">
             <ReactPlayer
