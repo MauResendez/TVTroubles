@@ -7,7 +7,7 @@ import ResponsivePlayer from '../components/ResponsivePlayer'
 
 function Swipe() {
     return (
-        <Container>
+        <Container className="mt-lg">
             <ResponsivePlayer/>
             <Description/>
             <MatchResults data={matchesData}/>
