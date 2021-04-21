@@ -3,7 +3,7 @@ import '../styles/Description.css'
 
 function Description(props) {
     return (
-        <div>
+        <div className="text-center mt-lg">
             <p>Name: {props.name}</p>
             <p>Description: {props.description}</p>
             <p>Rating: {props.rating}</p>

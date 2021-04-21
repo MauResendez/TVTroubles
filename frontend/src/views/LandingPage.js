@@ -4,8 +4,9 @@ import Features from '../components/Features'
 import Team from '../components/Team';
 import Explanation from '../components/Explanation'
 
-function LandingPage(){
-    return(
+
+function LandingPage() {
+    return (
         <div>
             <Explanation/>
             <Features/>
