@@ -3,14 +3,14 @@ import MatchResults from "../components/MatchResults";
 import {matchesData} from '../data/matchesData'
 import Description from '../components/Description';
 import {Container } from 'reactstrap'
-import ResponsivePlayer from '../components/ResponsivePlayer'
+import YesNoButton from '../components/YesNoButton';
 
 function Swipe() {
     return (
-        <Container className="mt-lg">
-            <ResponsivePlayer/>
+        <Container>
             <Description/>
             <MatchResults data={matchesData}/>
+            <YesNoButton/>
         </Container>
     );
 }
