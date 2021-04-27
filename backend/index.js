@@ -1,23 +1,24 @@
 const express = require('express')
 const app = express()
 const axios = require('axios');
-app.use(express.json());
 
+app.use(express.json());
 
 /*
     I will leave this here as an example that you can use
     when building your APIs. I suggest that you try to understand
     what each line is doing. Reach out if you have any questions.
 */
-app.get('/exampleApi', function (req, res) {
-
-    axios.get('https://api.agify.io?name=Mike')
-    .then(function (response) {
+app.get('/exampleApi', function (req, res) 
+{
+    axios.get('https://api.agify.io?name=Mike').then(function (response) 
+    {
         // handle success and send back a 200 response with the data
         console.log(response.data);
         res.status(200).json(response.data);
     })
-    .catch(function (error) {
+    .catch(function (error) 
+    {
         /* 
             It is good practice to handle the error and send back the 
             error message that was received from the API call
@@ -27,4 +28,24 @@ app.get('/exampleApi', function (req, res) {
     })
 })
 
-app.listen(8080, () => console.log('Listening at locahost:8080'))
+app.get('/getMatches', async (req, res) => 
+{
+    try 
+    {
+        id = req.query.id;
+
+        console.log(req.query);
+
+        axios.get(`https://codubee-projects-api.herokuapp.com/tvTroubles/getUserMatches?id=${id}`).then((response) => 
+        {
+            data = response.data;
+            res.status(200).json(data);
+        });
+    } 
+    catch (err) 
+    {
+        res.status(400).json(err);
+    }
+})
+
+app.listen(8080, () => console.log('Listening at localhost:8080'))
