@@ -4,7 +4,6 @@ const axios = require('axios');
 app.use(express.json());
 
 app.post('/addUserMovie', function (req, res) {
-    console.log(req.body)
 
     const body = {
         id: req.body.id,
