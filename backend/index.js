@@ -11,8 +11,6 @@ app.get('/getMatches', async (req, res) =>
     {
         id = req.query.id;
 
-        console.log(req.query);
-
         axios.get(`https://codubee-projects-api.herokuapp.com/tvTroubles/getUserMatches?id=${id}`).then((response) => 
         {
             data = response.data;
@@ -23,6 +21,7 @@ app.get('/getMatches', async (req, res) =>
     {
         res.status(400).json(err);
     }
+})
 
 app.post('/addUserMovie', function (req, res) {
 
@@ -34,7 +33,6 @@ app.post('/addUserMovie', function (req, res) {
     axios.post('https://codubee-projects-api.herokuapp.com/tvTroubles/addUserMovie',body)
 
     .then(function (response) {
-         console.log(response.data);
          res.status(200).json(response.data);
     })
     .catch(function (error) {
@@ -48,7 +46,6 @@ app.get('/getDescription', function (req, res) {
 
     axios.get('https://codubee-projects-api.herokuapp.com/tvTroubles/getDescription')
     .then(function (response) {
-        console.log(response.data);
         res.status(200).json(response.data);
     })
     .catch(function (error) {
