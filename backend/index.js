@@ -4,12 +4,6 @@ const axios = require('axios');
 
 app.use(express.json());
 
-/*
-    I will leave this here as an example that you can use
-    when building your APIs. I suggest that you try to understand
-    what each line is doing. Reach out if you have any questions.
-*/
-
 app.get('/getMatches', async (req, res) => 
 {
     try 
