@@ -1,7 +1,27 @@
 const express = require('express')
 const app = express()
 const axios = require('axios');
+
 app.use(express.json());
+
+
+app.get('/getMatches', async (req, res) => 
+{
+    try 
+    {
+        id = req.query.id;
+
+        axios.get(`https://codubee-projects-api.herokuapp.com/tvTroubles/getUserMatches?id=${id}`).then((response) => 
+        {
+            data = response.data;
+            res.status(200).json(data);
+        });
+    } 
+    catch (err) 
+    {
+        res.status(400).json(err);
+    }
+})
 
 app.post('/addUserMovie', function (req, res) {
 
@@ -13,7 +33,6 @@ app.post('/addUserMovie', function (req, res) {
     axios.post('https://codubee-projects-api.herokuapp.com/tvTroubles/addUserMovie',body)
 
     .then(function (response) {
-         console.log(response.data);
          res.status(200).json(response.data);
     })
     .catch(function (error) {
@@ -27,7 +46,6 @@ app.get('/getDescription', function (req, res) {
 
     axios.get('https://codubee-projects-api.herokuapp.com/tvTroubles/getDescription')
     .then(function (response) {
-        console.log(response.data);
         res.status(200).json(response.data);
     })
     .catch(function (error) {
@@ -36,4 +54,4 @@ app.get('/getDescription', function (req, res) {
     })
 })
 
-app.listen(8080, () => console.log('Listening at locahost:8080'))
+app.listen(8080, () => console.log('Listening at localhost:8080'))
