@@ -17,9 +17,20 @@ class Swipe extends React.Component {
         this.state = { 
             data: {}
         };
+        this.noButtonApi = this.noButtonApi.bind(this);
     }
 
     componentDidMount() {
+        axios.get('/getDescription')
+        .then((response) => {
+            console.log(response);
+            this.setState({
+                data: response.data
+            })
+        })
+    }
+
+    noButtonApi() {
         axios.get('/getDescription')
         .then((response) => {
             console.log(response);
@@ -35,7 +46,7 @@ class Swipe extends React.Component {
                 <Description title={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} />
                 <div class="text-center">
                     <Button color="success" onClick={this.submit} >Yes</Button>
-                    <Button color="danger" onClick={this.submit} className="ml-sm">No</Button>
+                    <Button color="danger" onClick={this.noButtonApi} className="ml-sm">No</Button>
                 </div>
                 <MatchResults data={matchesData} />
             </Container>
