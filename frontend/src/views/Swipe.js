@@ -15,12 +15,8 @@ class Swipe extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            name: '',
-            description: '',
-            rating: '' 
+            data: {}
         };
-        
-
     }
 
     componentDidMount() {
@@ -28,9 +24,7 @@ class Swipe extends React.Component {
         .then((response) => {
             console.log(response);
             this.setState({
-                name: response.title,
-                description: response.overview,
-                rating: response.vote_average
+                data: response.data
             })
         })
     }
@@ -38,7 +32,7 @@ class Swipe extends React.Component {
     render() {
         return (
             <Container>
-                <Description name={this.state.name} description={this.state.description} rating={this.state.rating} />
+                <Description name={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} />
                 <div class="text-center">
                     <Button color="success" onClick={this.submit} >Yes</Button>
                     <Button color="danger" onClick={this.submit} className="ml-sm">No</Button>
