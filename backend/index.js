@@ -57,7 +57,8 @@ app.get('/getDescription', function (req, res) {
 
 app.get('/getPreview', function (req, res) {
 
-    axios.get('https://codubee-projects-api.herokuapp.com/tvTroubles/getPreview?name=Zootopia')
+    var name = req.query.name
+    axios.get('https://codubee-projects-api.herokuapp.com/tvTroubles/getPreview?name='+name)
     .then(function (response) {
         res.status(200).json(response.data);
     })
