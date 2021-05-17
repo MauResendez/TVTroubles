@@ -32,7 +32,7 @@ class Swipe extends React.Component {
     render() {
         return (
             <Container>
-                <Description name={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} />
+                <Description title={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} />
                 <div class="text-center">
                     <Button color="success" onClick={this.submit} >Yes</Button>
                     <Button color="danger" onClick={this.submit} className="ml-sm">No</Button>
