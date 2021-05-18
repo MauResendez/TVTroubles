@@ -55,4 +55,18 @@ app.get('/getDescription', function (req, res) {
     })
 })
 
+app.get('/getPreview', function (req, res) {
+
+    var name = req.query.name
+    axios.get('https://codubee-projects-api.herokuapp.com/tvTroubles/getPreview?name='+name)
+    .then(function (response) {
+        res.status(200).json(response.data);
+    })
+    .catch(function (error) {
+        console.log(error)
+        res.status(400).json({error:"An error occurred"});
+    })
+})
+
+
 app.listen(process.env.PORT || 8080, () => console.log('Listening at localhost:8080'))
