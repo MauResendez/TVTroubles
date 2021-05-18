@@ -15,12 +15,16 @@ class Swipe extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            data: {}
+            data: {},
+            userId:0
         };
         this.noButtonApi = this.noButtonApi.bind(this);
+        this.yesButtonApi = this.yesButtonApi.bind(this);
+        this.getMovie = this.getMovie.bind(this);
     }
 
     componentDidMount() {
+        this.setState({userId: Math.floor(Math.random()*500)})
         axios.get('/getDescription')
         .then((response) => {
             console.log(response);
@@ -31,6 +35,26 @@ class Swipe extends React.Component {
     }
 
     noButtonApi() {
+        this.getMovie();
+    }
+
+    yesButtonApi() {
+        
+        var body = {
+            id: this.state.userId,
+            record: this.state.data
+        }
+
+        axios.post('/addUserMovie', body)
+        .then((response) => {
+            console.log(response);
+        })
+        .then(()=>{
+            this.getMovie();
+        })
+    }
+
+    getMovie(){
         axios.get('/getDescription')
         .then((response) => {
             console.log(response);
@@ -40,12 +64,13 @@ class Swipe extends React.Component {
         })
     }
 
+
     render() {
         return (
             <Container>
                 <Description title={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} />
                 <div class="text-center">
-                    <Button color="success" onClick={this.submit} >Yes</Button>
+                    <Button color="success" onClick={this.yesButtonApi} >Yes</Button>
                     <Button color="danger" onClick={this.noButtonApi} className="ml-sm">No</Button>
                 </div>
                 <MatchResults data={matchesData} />
