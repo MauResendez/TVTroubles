@@ -16,10 +16,9 @@ function MatchResults(props) {
                     <Row>
                         {
                             props.data.map((item, val) => {
-                                val += 1;
                                 return (
-                                    <Col sm="12" md="6" lg="4">
-                                        <Card key={val} className="match-results-card">
+                                    <Col key={val} sm="12" md="6" lg="4">
+                                        <Card  className="match-results-card">
                                             <CardHeader>
                                                 <div>
                                                     {item.name}

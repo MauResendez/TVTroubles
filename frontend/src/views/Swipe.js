@@ -69,7 +69,7 @@ class Swipe extends React.Component {
         return (
             <Container>
                 <Description title={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} />
-                <div class="text-center">
+                <div className="text-center">
                     <Button color="success" onClick={this.yesButtonApi} >Yes</Button>
                     <Button color="danger" onClick={this.noButtonApi} className="ml-sm">No</Button>
                 </div>
