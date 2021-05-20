@@ -4,7 +4,6 @@ const axios = require('axios');
 
 app.use(express.json());
 
-
 app.get('/getMatches', async (req, res) => 
 {
     try 
