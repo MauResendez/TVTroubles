@@ -27,7 +27,6 @@ class Swipe extends React.Component
 
         this.state = { 
             data: {},
-            // userId:0
             userId: UID
         };
 
@@ -37,26 +36,7 @@ class Swipe extends React.Component
     }
 
     componentDidMount() 
-    {
-        // this.setState({userId: Math.floor(Math.random()*500)})
-
-        // var UID;
-
-        // if(!sessionStorage.getItem('UID'))
-        // {
-        //     UID = Math.floor(Math.random() * 100);
-        //     sessionStorage.setItem('UID', UID);
-        // }
-
-        // axios.get('/getDescription')
-        // .then((response) => 
-        // {
-        //     // console.log(response);
-        //     this.setState({
-        //         data: response.data
-        //     })
-        // })
-        
+    {   
         this.getMovie();
     }
 
@@ -93,12 +73,22 @@ class Swipe extends React.Component
         })
         .then(() => 
         {
-            axios.get(`/getPreview?name=${this.state.data.name}`)
-            .then((response) => 
+            if(this.state.data.name)
             {
-                console.log(response.data);
-                this.state.data.preview = response.data;
-            })
+                axios.get(`/getPreview?name=${this.state.data.name}`)
+                .then((response) => 
+                {
+                    console.log(response.data);
+                    
+                    this.setState(prevState => {
+                        let data = { ...prevState.data };
+    
+                        data.preview = response.data.url;                
+    
+                        return { data }; 
+                    })
+                })
+            }
         })
     }
 
