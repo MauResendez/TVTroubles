@@ -7,15 +7,11 @@ import axios from 'axios';
 
 class MatchResults extends Component 
 {
-    // const [isOpen, setIsOpen] = useState(false);
-
-    // const toggle = () => setIsOpen(!isOpen);
-
     constructor(props) 
     {
         super(props);
 
-        this.state = { isOpen: false, matches: [] };
+        this.state = { isOpen: false, matches: [], userId: this.props.userId };
 
         this.toggle = this.toggle.bind(this);
         this.getMatches = this.getMatches.bind(this);
@@ -35,14 +31,15 @@ class MatchResults extends Component
 
     getMatches()
     {
-        var UID = sessionStorage.getItem("UID");
-        axios.get(`/getMatches?id=${UID}`).then((response) => 
+        console.log(this.state.userId);
+        axios.get(`/getMatches?id=${this.state.userId}`).then((response) => 
         {
-            this.setState({
-                matches: response.data
-            });
+            console.log(response.data);
+            // this.setState({
+            //     matches: response.data
+            // });
 
-            console.log(this.state.matches);
+            // console.log(this.state.matches);
         });
     }
 
@@ -53,7 +50,6 @@ class MatchResults extends Component
 
     render() 
     {
-        console.log(this.state)
         return (
             <Container className="matchResults">
                 <div className="text-center">
@@ -91,48 +87,5 @@ class MatchResults extends Component
         )
     }
 }
-
-// function MatchResults(props) 
-// {
-//     const [isOpen, setIsOpen] = useState(false);
-
-//     const toggle = () => setIsOpen(!isOpen);
-
-//     return (
-//         <Container className="matchResults">
-//             <div className="text-center">
-//                 <Button color="primary" onClick={toggle} style={{ marginBottom: '1rem' }}>View Matches</Button>
-//                 <Collapse isOpen={isOpen}>
-//                     <Row>
-//                         {
-//                             props.data.map((item, val) => {
-//                                 val += 1;
-//                                 return (
-//                                     <Col sm="12" md="6" lg="4">
-//                                         <Card key={val} className="match-results-card">
-//                                             <CardHeader>
-//                                                 <div>
-//                                                     {item.name}
-//                                                 </div>
-//                                                 <span>
-//                                                     <AiFillStar />
-//                                                     {item.rating}
-//                                                 </span>
-//                                             </CardHeader>
-//                                             <CardBody>
-//                                                 {item.description}
-//                                             </CardBody>
-//                                         </Card>
-//                                     </Col>
-//                                 )
-//                             })
-//                         }
-//                     </Row>
-//                 </Collapse>
-//             </div>
-
-//         </Container>
-//     )
-// }
 
 export default MatchResults;

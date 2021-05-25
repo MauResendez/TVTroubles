@@ -68,4 +68,4 @@ app.get('/getPreview', function (req, res) {
 })
 
 
-app.listen(process.env.PORT || 8080, () => console.log('Listening at localhost:8080'))
+app.listen(8080, () => console.log('Listening at localhost:8080'))
