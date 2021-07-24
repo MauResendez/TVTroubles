@@ -1,14 +1,17 @@
 import React from 'react';
+import { Container } from 'reactstrap';
+import '../styles/Explanation.css'
 
-function Explanation() {
+function Explanation() 
+{
     return (
-        <div className="jumbotron">
-            <h1 className="display-4">Welcome to TV Troubles!</h1>
-            <p className="lead">We will help you solve the issue of not knowing what to watch on TV.</p>
-            <hr className="my-4"></hr>
+        <Container className="explanation">
+            <h1>Welcome to TV Troubles!</h1>
+            <br/>
+            <p>We will help you solve the issue of not knowing what to watch on TV.</p>
             <p> We will show you one show description at a time along with a preview video of the show or movie.
-            You will then select yes or no to the show or movie.</p>
-        </div>
+                You will then select yes or no to the show or movie.</p>
+        </Container>
     )
 };
 

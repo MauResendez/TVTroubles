@@ -52,12 +52,16 @@ class Swipe extends React.Component
             record: this.state.data
         }
 
-        axios.post('/addUserMovie', body)
-        .then((response) => {
+        axios.post('/addUserMovie', body).then((response) => 
+        {
             console.log(response);
-        })
-        .then(()=>{
+        }).then(() =>
+        {
             this.getMovie();
+        }).catch(function (error) 
+        {
+            console.log(error)
+            // res.status(400).json({error: "An error occurred"});
         })
     }
 
@@ -67,11 +71,11 @@ class Swipe extends React.Component
         .then((response) => 
         {
             console.log(response);
-            this.setState({
+            this.setState
+            ({
                 data: response.data
             })
-        })
-        .then(() => 
+        }).then(() => 
         {
             if(this.state.data.name)
             {
@@ -87,6 +91,10 @@ class Swipe extends React.Component
     
                         return { data }; 
                     })
+                }).catch(function (error) 
+                {
+                    console.log(error)
+                    // res.status(400).json({error: "An error occurred"});
                 })
             }
         })

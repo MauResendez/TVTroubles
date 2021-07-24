@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Description.css'
 
 function Description(props) 
 {
@@ -9,7 +8,6 @@ function Description(props)
             <div className="text-center mt-lg">
                 <div>
                     <h5>Preview</h5>
-                    <br/>
                     <iframe width="640" height="360" src={props.preview} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <br/>
                     <br/>

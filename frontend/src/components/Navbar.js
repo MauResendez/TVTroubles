@@ -3,21 +3,22 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reac
 import { Link } from "react-router-dom";
 import '../styles/Navbar.css'
 
-function NavBar() {
+function NavBar() 
+{
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div>
-      <Navbar color="info" light expand="md">
-        <NavbarBrand><h3 className="linkTextColor">TV Troubles</h3></NavbarBrand>
+      <Navbar color="primary" light expand="md">
+        <NavbarBrand href="/" id="navbar">TV Troubles</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/"><h5 className="linkTextColor">Home</h5></Link>
+              <Link to="/" className="link">Home</Link>
             </NavItem>
             <NavItem>
-              <Link to="/swipe"><h5 className="linkTextColor">Swipe</h5></Link>
+              <Link to="/swipe" className="link">Swipe</Link>
             </NavItem>
           </Nav>
         </Collapse>

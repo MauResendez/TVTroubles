@@ -1,4 +1,4 @@
-.featuresBackground {
+/* .featuresBackground {
     font-family: Verdana;
     margin-bottom: 6em;
 }
@@ -13,4 +13,31 @@
     text-align: left;
     font-size: 25px;
 
+} */
+
+.features
+{
+    padding-top: 50px;
+}
+
+.featuresRow
+{
+    padding-bottom: 32px;
+}
+
+.featuresTitle
+{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.featuresCard
+{
+    max-width: 248px;
+}
+
+.col
+{
+    padding-left: 3px !important;
+    padding-right: 3px !important;
 }

@@ -1,14 +1,11 @@
-.team
+.tools
 {
     padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
-.teamRow
-{
-    padding-bottom: 32px;
-}
-
-.teamTitle
+.toolsTitle
 {
     text-align: center;
     padding-bottom: 20px;
