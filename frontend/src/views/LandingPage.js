@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Tools from '../components/Tools';
 import Features from '../components/Features'
 import Team from '../components/Team';
-import Explanation from '../components/Explanation'
+import Explanation from '../components/Explanation';
 
 function LandingPage() 
 {
