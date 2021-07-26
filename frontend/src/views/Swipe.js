@@ -1,18 +1,13 @@
 import React from "react";
 import MatchResults from "../components/MatchResults";
-import { matchesData } from '../data/matchesData'
-import Description from '../components/Description';
+// import { matchesData } from '../data/matchesData'
+import Data from '../components/Data';
 import { Container, Button } from 'reactstrap'
 import '../styles/Swipe.css'
 import axios from 'axios'
 
 class Swipe extends React.Component 
 {
-    submit()
-    {
-        alert('hello world')
-    }
-
     constructor(props) 
     {
         super(props);
@@ -30,18 +25,13 @@ class Swipe extends React.Component
             userId: UID
         };
 
-        this.noButtonApi = this.noButtonApi.bind(this);
         this.yesButtonApi = this.yesButtonApi.bind(this);
+        this.noButtonApi = this.noButtonApi.bind(this);
         this.getMovie = this.getMovie.bind(this);
     }
 
     componentDidMount() 
     {   
-        this.getMovie();
-    }
-
-    noButtonApi() 
-    {
         this.getMovie();
     }
 
@@ -61,50 +51,75 @@ class Swipe extends React.Component
         }).catch(function (error) 
         {
             console.log(error)
-            // res.status(400).json({error: "An error occurred"});
-        })
+        });
+    }
+
+    noButtonApi() 
+    {
+        this.getMovie();
     }
 
     getMovie()
     {
-        axios.get('/getDescription')
-        .then((response) => 
-        {
-            console.log(response);
-            this.setState
-            ({
-                data: response.data
-            })
-        }).then(() => 
-        {
-            if(this.state.data.name)
-            {
-                axios.get(`/getPreview?name=${this.state.data.name}`)
-                .then((response) => 
-                {
-                    console.log(response.data);
+        // axios.get('/getDescription').then((response) => 
+        // {
+        //     console.log(response);
+        //     this.setState
+        //     ({
+        //         data: response.data
+        //     })
+        // }).then(() => 
+        // {
+        //     if(this.state.data.name)
+        //     {
+        //         axios.get(`/getPreview?name=${this.state.data.name}`).then((response) => 
+        //         {
+        //             console.log(response.data);
                     
-                    this.setState(prevState => {
-                        let data = { ...prevState.data };
+        //             this.setState(prevState => {
+        //                 let data = { ...prevState.data };
     
-                        data.preview = response.data.url;                
+        //                 data.preview = response.data.url;                
     
-                        return { data }; 
-                    })
-                }).catch(function (error) 
-                {
-                    console.log(error)
-                    // res.status(400).json({error: "An error occurred"});
+        //                 return { data }; 
+        //             })
+        //         }).catch(function (error) 
+        //         {
+        //             console.log(error)
+        //             // res.status(400).json({error: "An error occurred"});
+        //         })
+        //     }
+        // }).catch(function (error) 
+        // {
+        //     console.log(error)
+        // });
+
+        try 
+        {
+            axios.get('/getMovie').then((response) =>
+            {
+                this.setState
+                ({
+                    data: response.data
                 })
-            }
-        })
+            }).catch(function (error) 
+            {
+                console.log(error)
+            });
+
+            
+        } 
+        catch (err) 
+        {
+            console.log(err);
+        }
     }
 
     render() 
     {
         return (
             <Container>
-                <Description title={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} preview={this.state.data.preview}/>
+                <Data title={this.state.data.title} description={this.state.data.description} rating={this.state.data.rating} preview={this.state.data.video}/>
                 <div className="text-center">
                     <Button color="success" onClick={this.yesButtonApi} >Yes</Button>
                     <Button color="danger" onClick={this.noButtonApi} className="ml-sm">No</Button>
