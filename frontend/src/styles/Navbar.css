@@ -1,14 +1,13 @@
-.nav-item{
-    padding-left: 10px;
+.nav-item
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+    color: white;
 }
 
-.link, .link:hover
+.navbar-brand, .nav-item a
 {
-    color: white;
-    text-decoration: none;
-}
-
-#navbar
-{
-    color: white;
+    color: white !important;
+    text-decoration: none !important;
 }

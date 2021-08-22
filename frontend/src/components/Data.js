@@ -8,7 +8,7 @@ function Data(props)
     return (
         <div className="text-center mt-lg">
             <div className="video">
-                <ReactPlayer url={props.preview} controls={true}/>
+                <ReactPlayer url={props.preview} controls={true} playing={true}/>
             </div>
             <div>
                 <h5>Title </h5>
