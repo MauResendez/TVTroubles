@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Card, CardBody, Container, CardHeader, Row, Col, Collapse, Button } from 'reactstrap';
 import { AiFillStar } from 'react-icons/ai'
 import '../styles/MatchResults.css';
-import axios from 'axios';
+// import axios from 'axios';
 
 class MatchResults extends Component 
 {
@@ -31,16 +31,19 @@ class MatchResults extends Component
 
     getMatches()
     {
-        console.log(this.state.userId);
-        axios.get(`/getMatches?id=${this.state.userId}`).then((response) => 
-        {
-            console.log(response.data);
-            // this.setState({
-            //     matches: response.data
-            // });
+        // console.log(this.state.userId);
+        // axios.get(`/getMatches?id=${this.state.userId}`).then((response) => 
+        // {
+        //     console.log(response.data);
+        //     // this.setState({
+        //     //     matches: response.data
+        //     // });
 
-            // console.log(this.state.matches);
-        });
+        //     // console.log(this.state.matches);
+        // }).catch(function (error) 
+        // {
+        //     console.log(error)
+        // });
     }
 
     componentDidMount() 
