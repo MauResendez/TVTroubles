@@ -7,18 +7,18 @@ function Data(props)
 {
     return (
         <Fragment>
-            <div className="video-wrapper">
+            <div className="video-wrapper" id="video-wrapper" data-testid="video">
                 <ReactPlayer url={props.preview} controls={true} playing={true} width='100%' height='100%'/>
             </div>
-            <div>
+            <div className="title" id="title">
                 <h5>Title</h5>
                 <p>{props.title}</p>
             </div>
-            <div>
+            <div className="description" id="description">
                 <h5>Description</h5>
                 <p>{props.description}</p>
             </div>
-            <div className="rating">
+            <div className="rating" id="rating">
                 <h5>Rating</h5>
                 <p>
                     {props.rating}/10
