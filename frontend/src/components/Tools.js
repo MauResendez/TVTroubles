@@ -13,19 +13,17 @@ import '../styles/Tools.css';
 function Tools() 
 {
   return (
-    <div className="tools">
-      <Container>
-        <h1 className="toolsTitle">Tools</h1>
-        <Row>
-          <Col sm="2" md="4"><img src={react} alt="React Logo"/> </Col>
-          <Col sm="2" md="4"><img src={aws} alt="Amazon AWS Logo"/></Col>
-          <Col sm="2" md="4"> <img src={heroku} alt="Heroku Logo"/> </Col>
-          <Col sm="2" md="4"> <img src={jira} alt="Jira Logo"/> </Col>
-          <Col sm="2" md="4"> <img src={nodejs} alt="Node.js Logo"/> </Col>
-          <Col sm="2" md="4"> <img src={postman} alt="Postman Logo"/></Col>
-        </Row>
+      <Container className="tools">
+          <h1 className="tools-title">Tools</h1>
+          <Row md={2} lg={3}>
+            <Col><img src={react} alt="React Logo"/> </Col>
+            <Col><img src={aws} alt="Amazon AWS Logo"/></Col>
+            <Col><img src={heroku} alt="Heroku Logo"/> </Col>
+            <Col><img src={jira} alt="Jira Logo"/> </Col>
+            <Col><img src={nodejs} alt="Node.js Logo"/> </Col>
+            <Col><img src={postman} alt="Postman Logo"/></Col>
+          </Row>
       </Container>
-    </div>
   );
 }
 export default Tools;

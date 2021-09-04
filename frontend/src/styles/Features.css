@@ -1,37 +1,20 @@
-/* .featuresBackground {
-    font-family: Verdana;
-    margin-bottom: 6em;
-}
-
-.featuresTitle {
-    margin: 25px 25px;
-    text-align: center;
-    font-size: 50px;
-}
-
-.featuresListItems {
-    text-align: left;
-    font-size: 25px;
-
-} */
-
 .features
 {
     padding-top: 50px;
 }
 
-.featuresRow
+.features-row
 {
     padding-bottom: 32px;
 }
 
-.featuresTitle
+.features-title
 {
     text-align: center;
     padding-bottom: 20px;
 }
 
-.featuresCard
+.features-card
 {
     max-width: 248px;
 }
@@ -40,4 +23,12 @@
 {
     padding-left: 3px !important;
     padding-right: 3px !important;
+}
+
+@media (max-width: 576px)
+{
+    .features
+    {
+        max-width: 480px !important;
+    }
 }

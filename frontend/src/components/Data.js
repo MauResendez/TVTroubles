@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactPlayer from 'react-player';
 
 import '../styles/Data.css';
@@ -6,12 +6,12 @@ import '../styles/Data.css';
 function Data(props) 
 {
     return (
-        <div className="text-center mt-lg">
-            <div className="video">
-                <ReactPlayer url={props.preview} controls={true} playing={true}/>
+        <Fragment>
+            <div className="video-wrapper">
+                <ReactPlayer url={props.preview} controls={true} playing={true} width='100%' height='100%'/>
             </div>
             <div>
-                <h5>Title </h5>
+                <h5>Title</h5>
                 <p>{props.title}</p>
             </div>
             <div>
@@ -28,7 +28,7 @@ function Data(props)
                     </svg>
                 </p>
             </div>
-        </div>
+        </Fragment>
     )
 };
 

@@ -1,3 +1,22 @@
-.ml-sm{
-    margin-left: 10px;
+.ml-sm
+{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px)
+{
+    .swipe
+    {
+        width: 540px !important;
+    }
+}
+
+@media (max-width: 576px)
+{
+    .swipe
+    {
+        width: 100% !important;
+        height: 100% !important;
+    }
 }

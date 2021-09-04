@@ -1,9 +1,45 @@
-.video
+.video-wrapper 
 {
-    width: 640px;
-    height: 360px;
+    position: relative;
     margin: 0 auto !important;
+    margin-top: 3rem !important;
     margin-bottom: 1rem !important;
+}
+
+@media (min-width: 992px)
+{
+    video, iframe
+    {
+        width: 854px !important;
+        height: 480px !important;
+    }
+}
+
+@media (max-width: 992px)
+{
+    video, iframe
+    {
+        width: 640px !important;
+        height: 360px !important;
+    }
+}
+
+@media (max-width: 768px)
+{
+    video, iframe
+    {
+        width: 426px !important;
+        height: 240px !important;
+    }
+}
+
+@media (max-width: 576px)
+{
+    video, iframe
+    {
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
 
 svg
