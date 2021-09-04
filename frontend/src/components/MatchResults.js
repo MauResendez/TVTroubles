@@ -107,18 +107,20 @@ class MatchResults extends Component
                                     val += 1;
                                     return (
                                         <Col sm="12" md="6" lg="4">
-                                            <Card key={val} className="match-results-card">
+                                            <Card key={val} className="match-results-card" data-testid="card">
                                                 <CardHeader>
-                                                    <div>
+                                                    <div data-testid="title">
                                                         {item.title}
                                                     </div>
-                                                    <span>
+                                                    <span data-testid="rating">
                                                         <AiFillStar />
                                                         {item.rating}
                                                     </span>
                                                 </CardHeader>
                                                 <CardBody>
-                                                    {item.description}
+                                                    <div data-testid="description">
+                                                        {item.description}
+                                                    </div>
                                                 </CardBody>
                                                 <Button className="deleteBtn" color="danger" onClick={this.deleteButtonApi} value={item.id}>Delete</Button>
                                             </Card>
