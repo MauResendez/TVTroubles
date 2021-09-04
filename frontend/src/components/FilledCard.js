@@ -7,10 +7,10 @@ function FilledCard(props)
 {
     return (
         // Takes props given from the each FilledCard component in the Team component to use for the card's header, image, and footer
-        <Container> 
+        <Container className="filled-card"> 
             <Card>
                 <CardHeader><strong>{props.title}</strong></CardHeader>
-                <CardImg src={props.photo} alt="Image" className="cardImg"/>
+                <CardImg src={props.photo} alt="Image" className="card-img"/>
                 <CardFooter>{props.description}</CardFooter>
             </Card>
         </Container>

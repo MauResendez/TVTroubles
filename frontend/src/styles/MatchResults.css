@@ -1,18 +1,21 @@
-.matchResults
+.match-results
 {
     padding-bottom: 32px;
     padding-top: 32px;
 }
 
-.matchResultsTitle
+.match-results-card
 {
-    padding-bottom: 20px;
-}
-
-.match-results-card{
     margin-top: 3em;
+    min-height: 350px;
 }
 
-.match-results-card svg{
+.match-results-card svg
+{
     color:gold;
+}
+
+.deleteBtn
+{
+    border-radius: 0rem !important;
 }

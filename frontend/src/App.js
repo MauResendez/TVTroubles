@@ -20,12 +20,10 @@ function App()
       if(user)
       {
         id = user.sub.split('|')[1];
-        console.log(id);
-
-        axios.get(`/user?id=${id}`);
 
         // Create a new user if ID doesn't exist in database
 
+        axios.get(`/user?id=${id}`);
       }
 
   }, [user]);
