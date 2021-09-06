@@ -1,7 +1,7 @@
 const express = require('express');
-// const dotenv = require('dotenv');
+const dotenv = require('dotenv');
 // const mysql = require('mysql2');
-// const cors = require('cors');
+const cors = require('cors');
 // const path = require('path');
 const app = express();
 
@@ -121,6 +121,9 @@ dotenv.config({ path: './config.env' });
 //         return res.status(400).json({error: "An error occurred with getMovie"});
 //     }
 // });
+
+// Routes
+app.use('/', require('./routes/routes'));
 
 if(process.env.NODE_ENV === 'production')
 {

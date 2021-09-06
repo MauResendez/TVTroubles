@@ -115,3 +115,5 @@ router.get('/getMovie', (req, res) =>
         return res.status(400).json({error: "An error occurred with getMovie"});
     }
 });
+
+module.exports = router;
