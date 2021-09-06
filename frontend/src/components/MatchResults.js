@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Card, CardBody, Container, CardHeader, Row, Col, Collapse, Button } from 'reactstrap';
 import { AiFillStar } from 'react-icons/ai';
 import '../styles/MatchResults.css';
@@ -90,40 +90,50 @@ class MatchResults extends Component
 
     render() 
     {
+        const { matches } = this.state.matches;
+        console.log(matches);
+
         return (
             <Container className="match-results">
                 <div className="text-center">
                     <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>View Matches</Button>
                     <Collapse isOpen={this.state.isOpen}>
-                        {/* <Row>
-                            {
-                                this.state.matches.map((item, val) => 
+                        {
+                            matches.length ? 
+                            (
+                                <Row>
                                 {
-                                    val += 1;
-                                    return (
-                                        <Col sm="12" md="6" lg="4">
-                                            <Card key={val} className="match-results-card" data-testid="card">
-                                                <CardHeader>
-                                                    <div data-testid="title">
-                                                        {item.title}
-                                                    </div>
-                                                    <span data-testid="rating">
-                                                        <AiFillStar />
-                                                        {item.rating}
-                                                    </span>
-                                                </CardHeader>
-                                                <CardBody>
-                                                    <div data-testid="description">
-                                                        {item.description}
-                                                    </div>
-                                                </CardBody>
-                                                <Button className="deleteBtn" color="danger" onClick={this.deleteButtonApi} value={item.id}>Delete</Button>
-                                            </Card>
-                                        </Col>
-                                    )
-                                })
-                            }
-                        </Row> */}
+                                    this.state.matches.map((item, val) => 
+                                    {
+                                        val += 1;
+                                        return (
+                                            <Col sm="12" md="6" lg="4">
+                                                <Card key={val} className="match-results-card" data-testid="card">
+                                                    <CardHeader>
+                                                        <div data-testid="title">
+                                                            {item.title}
+                                                        </div>
+                                                        <span data-testid="rating">
+                                                            <AiFillStar />
+                                                            {item.rating}
+                                                        </span>
+                                                    </CardHeader>
+                                                    <CardBody>
+                                                        <div data-testid="description">
+                                                            {item.description}
+                                                        </div>
+                                                    </CardBody>
+                                                    <Button className="deleteBtn" color="danger" onClick={this.deleteButtonApi} value={item.id}>Delete</Button>
+                                                </Card>
+                                            </Col>
+                                        )
+                                    })
+                                }
+                                </Row>
+                            )
+                            :
+                            <Fragment/>
+                        }
                     </Collapse>
                 </div>
             </Container>
