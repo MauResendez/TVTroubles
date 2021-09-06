@@ -6,6 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const PORT = process.env.PORT || 8080;
+
 // Load env
 dotenv.config({ path: './config.env' });
 
@@ -22,4 +24,4 @@ if(process.env.NODE_ENV === 'production')
     });
 }
 
-app.listen(process.env.PORT || 8080, () => console.log('Listening at localhost'));
+app.listen(PORT, () => console.log(`Listening at localhost ${PORT}`));
