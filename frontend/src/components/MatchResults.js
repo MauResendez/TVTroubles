@@ -97,7 +97,7 @@ class MatchResults extends Component
                     <Collapse isOpen={this.state.isOpen}>
                         <Row>
                             {
-                                this.state.matches.map((item, val) => 
+                                [this.state.matches].map((item, val) => 
                                 {
                                     val += 1;
                                     return (
