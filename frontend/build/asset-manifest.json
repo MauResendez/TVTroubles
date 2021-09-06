@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.77eafce6.chunk.css",
+    "main.js": "/static/js/main.59bdfbf4.chunk.js",
+    "main.js.map": "/static/js/main.59bdfbf4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d33eafc3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d33eafc3.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.47b2f3e4.chunk.js": "/static/js/2.47b2f3e4.chunk.js",
+    "static/js/2.47b2f3e4.chunk.js.map": "/static/js/2.47b2f3e4.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.77eafce6.chunk.css.map": "/static/css/main.77eafce6.chunk.css.map",
+    "static/js/2.47b2f3e4.chunk.js.LICENSE.txt": "/static/js/2.47b2f3e4.chunk.js.LICENSE.txt",
+    "static/media/aws-logo.feaf42b7.png": "/static/media/aws-logo.feaf42b7.png",
+    "static/media/heroku-logo.76559709.png": "/static/media/heroku-logo.76559709.png",
+    "static/media/jira-logo.bb9eccff.png": "/static/media/jira-logo.bb9eccff.png",
+    "static/media/node-js-logo.d6467bb6.png": "/static/media/node-js-logo.d6467bb6.png",
+    "static/media/react-logo.b26c3163.png": "/static/media/react-logo.b26c3163.png",
+    "static/media/ut-dallas.cf0b8464.png": "/static/media/ut-dallas.cf0b8464.png",
+    "static/media/utrgv.afbd6ba0.png": "/static/media/utrgv.afbd6ba0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d33eafc3.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.47b2f3e4.chunk.js",
+    "static/css/main.77eafce6.chunk.css",
+    "static/js/main.59bdfbf4.chunk.js"
+  ]
+}
