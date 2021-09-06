@@ -7,8 +7,6 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-// app.use(express.static(path.join(__dirname, "build")));
-app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 // Load env
 dotenv.config({ path: './config.env' });
@@ -124,10 +122,13 @@ app.get('/getMovie', (req, res) =>
     }
 });
 
-app.get("/*", (req, res) => 
+if(process.env.NODE_ENV === 'production')
 {
-    // res.sendFile(path.join(__dirname, "build", "index.html"));
-    res.sendFile(path.join(__dirname, "./frontend/build", "index.html"));
-});
+    app.use(express.static(path.join(__dirname, 'build'))); 
+
+    app.get('/*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    });
+}
 
 app.listen(process.env.PORT || 8080, () => console.log('Listening at localhost'));
