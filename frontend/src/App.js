@@ -23,7 +23,7 @@ function App()
 
         // Create a new user if ID doesn't exist in database
 
-        axios.get(`/user?id=${id}`);
+        axios.get(`https://tvtroubles.herokuapp.com/user?id=${id}`);
       }
 
   }, [user]);

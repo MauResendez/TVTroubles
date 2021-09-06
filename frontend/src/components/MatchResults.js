@@ -54,7 +54,7 @@ class MatchResults extends Component
         {
             let uid = this.state.uid;
 
-            axios.get(`/getMatches?id=${uid}`).then((response) => 
+            axios.get(`https://tvtroubles.herokuapp.com/getMatches?id=${uid}`).then((response) => 
             {
                 this.setState
                 ({
@@ -77,7 +77,7 @@ class MatchResults extends Component
                 mid: e.target.value
             }
     
-            axios.post('/deleteMatch', body).then(() =>
+            axios.post('https://tvtroubles.herokuapp.com/deleteMatch', body).then(() =>
             {
                 this.getMatches();
             });
