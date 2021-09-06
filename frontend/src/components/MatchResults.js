@@ -100,7 +100,7 @@ class MatchResults extends Component
                 <div className="text-center">
                     <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>View Matches</Button>
                     <Collapse isOpen={this.state.isOpen}>
-                        <Row>
+                        {/* <Row>
                             {
                                 this.state.matches.map((item, val) => 
                                 {
@@ -128,7 +128,7 @@ class MatchResults extends Component
                                     )
                                 })
                             }
-                        </Row>
+                        </Row> */}
                     </Collapse>
                 </div>
             </Container>
