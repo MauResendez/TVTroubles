@@ -1,9 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const dotenv = require('dotenv');
 const mysql = require('mysql2');
-const cors = require('cors');
-const path = require('path');
 
 const db = mysql.createPool
 ({
