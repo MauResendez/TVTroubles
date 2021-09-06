@@ -17,11 +17,6 @@ class MatchResults extends Component
         this.deleteButtonApi = this.deleteButtonApi.bind(this);
     }
 
-    componentDidMount() 
-    {
-        this.getMatches();
-    }
-
     componentDidUpdate(prevProps)
     {
         if(this.props !== prevProps)
