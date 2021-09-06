@@ -29,7 +29,7 @@ router.get('/user', (req, res) =>
                 db.query("INSERT INTO users (id, admin) VALUES (?, ?)", [id, admin]);
             }
 
-            return res.status(200).json(result);
+            return res.status(200).json({"result": result});
         });
     } 
     catch (err) 
@@ -48,7 +48,7 @@ router.post('/addMatch', (req, res) =>
            
         db.query("INSERT INTO matches (uid, mid) VALUES (?, ?)", [uid, mid], (err, result) => 
         {
-            return res.status(200).json(result);              
+            return res.status(200).json({"result": result});              
         });
     } 
     catch (err) 

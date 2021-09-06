@@ -42,7 +42,7 @@ class Swipe extends React.Component
                 mid: this.state.data.id
             }  
     
-            axios.post('https://tvtroubles.herokuapp.com/addMatch', body).then(() =>
+            axios.post('/addMatch', body).then(() =>
             {
                 this.getMovie();
                 this.getMatches();
@@ -70,7 +70,7 @@ class Swipe extends React.Component
     {
         try 
         {
-            axios.get('https://tvtroubles.herokuapp.com/getMovie').then((response) =>
+            axios.get('/getMovie').then((response) =>
             {
                 this.setState
                 ({
