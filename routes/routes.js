@@ -29,6 +29,8 @@ router.get('/user', (req, res) =>
                 db.query("INSERT INTO users (id, admin) VALUES (?, ?)", [id, admin]);
             }
 
+            res.setHeader("Content-Type","application/json");
+
             return res.status(200).json({result});
         });
     } 
@@ -48,6 +50,7 @@ router.post('/addMatch', (req, res) =>
            
         db.query("INSERT INTO matches (uid, mid) VALUES (?, ?)", [uid, mid], (err, result) => 
         {
+            res.setHeader("Content-Type","application/json");
             return res.status(200).json({result});              
         });
     } 
@@ -67,6 +70,7 @@ router.post('/deleteMatch', (req, res) =>
            
         db.query("DELETE FROM matches WHERE uid = ? AND mid = ?", [uid, mid], (err, result) => 
         {
+            res.setHeader("Content-Type","application/json");
             return res.status(200).json({result});              
         });
     } 
@@ -85,6 +89,7 @@ router.get('/getMatches', (req, res) =>
 
         db.query("SELECT * FROM media WHERE id IN (SELECT mid FROM matches WHERE uid = ?);", [id], (err, matches) => 
         {
+            res.setHeader("Content-Type","application/json");
             return res.status(200).json({matches});
         });
     } 
@@ -103,6 +108,7 @@ router.get('/getMovie', (req, res) =>
 
         db.query(`SELECT * FROM media WHERE id = ${id}`, (err, result) => 
         {
+            res.setHeader("Content-Type","application/json");
             return res.status(200).json(result[0]);
         });
     } 
