@@ -30,10 +30,10 @@ if(process.env.NODE_ENV === 'production')
     //     res.sendFile(path.join(process.env.PWD, 'client', 'build', 'index.html'));
     // });
 
-    app.use(express.static(path.join(process.env.PWD, 'client', 'public')))
+    app.use(express.static(path.join(__dirname + '/client' + '/build')))
 
     app.get('/*', (req, res) => {
-        res.sendFile(path.join(process.env.PWD, 'client', 'public', 'index.html'));
+        res.sendFile(path.join(__dirname, '/client' + '/build' + '/index.html'));
     });
 }
 
