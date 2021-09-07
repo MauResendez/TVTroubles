@@ -1,14 +1,6 @@
-const express = require('express');
-const dotenv = require('dotenv');
+const express = require("express");
+const router = express.Router();
 const mysql = require('mysql2');
-const cors = require('cors');
-const app = express();
-
-app.use(express.json());
-app.use(cors());
-
-// Load env
-dotenv.config({ path: './config.env' });
 
 const db = mysql.createPool
 ({
@@ -20,7 +12,7 @@ const db = mysql.createPool
     waitForConnections: true,
 });
 
-app.get('/user', (req, res) => 
+router.get('/user', (req, res) => 
 {
     try 
     {
@@ -47,7 +39,7 @@ app.get('/user', (req, res) =>
     }
 });
 
-app.post('/addMatch', (req, res) =>
+router.post('/addMatch', (req, res) =>
 {
     try 
     {
@@ -66,7 +58,7 @@ app.post('/addMatch', (req, res) =>
     }
 });
 
-app.post('/deleteMatch', (req, res) =>
+router.post('/deleteMatch', (req, res) =>
 {
     try 
     {
@@ -75,7 +67,7 @@ app.post('/deleteMatch', (req, res) =>
            
         db.query("DELETE FROM matches WHERE uid = ? AND mid = ?", [uid, mid], (err, result) => 
         {
-            return res.status(200).json({"result": result});              
+            return res.status(200).json(result);              
         });
     } 
     catch (err) 
@@ -85,7 +77,7 @@ app.post('/deleteMatch', (req, res) =>
     }
 });
 
-app.get('/getMatches', (req, res) =>
+router.get('/getMatches', (req, res) =>
 {
     try 
     {
@@ -103,7 +95,7 @@ app.get('/getMatches', (req, res) =>
     }
 });
 
-app.get('/getMovie', (req, res) =>
+router.get('/getMovie', (req, res) =>
 {
     try 
     {
@@ -121,4 +113,4 @@ app.get('/getMovie', (req, res) =>
     }
 });
 
-app.listen(8080, () => console.log('Listening at localhost:8080'));
+module.exports = router;
