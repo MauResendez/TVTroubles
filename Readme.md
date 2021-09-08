@@ -4,11 +4,13 @@
 [![Pull Requests][pr-shield]][pr-url]
 [![MIT License][license-shield]][license-url]
 
+Demo: https://tvtroubles.herokuapp.com/
+
 <br />
 <p align="center">
 
   <h3 align="center"></h3>
-      Tv Troubles
+      TV Troubles
   <p align="center">
     This project is meant to give an answer to the question of what do we watch?
   </p>
