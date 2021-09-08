@@ -1,0 +1,27 @@
+.card
+{
+    margin-bottom: 10px;
+}
+
+.card-img
+{
+    padding: 1rem;
+    min-height: '200px';
+    min-width: '200px';
+}
+
+@media (min-width: 768px)
+{
+    .filled-card
+    {
+        max-width: 540px !important;
+    }
+}
+
+@media (max-width: 576px)
+{
+    .filled-card
+    {
+        max-width: 480px !important;
+    }
+}
